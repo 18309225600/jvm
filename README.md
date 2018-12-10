@@ -1,6 +1,22 @@
 # jvm
 用于jvm参数调优学习
 
+Test2 配置信息：
+    /**
+             *
+             *  -Xms20m -Xmx20m -Xmn1m -XX:SurvivorRatio=2  -XX:+PrintGCDetail   -XX:+UseSerialGC
+             *  -Xms20m -Xmx20m -Xmn7m -XX:SurvivorRatio=2  -XX:+PrintGCDetail   -XX:+UseSerialGC
+             *  -Xms20m -Xmx20m -Xmn7m -XX:NewRatio=2  -XX:+PrintGCDetail   -XX:+UseSerialGC
+             *
+             * -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=d:/test2.dump
+             *
+             *  -Xms20m:初始内存
+             *  -Xmx20m:可扩展内存
+             *  -Xmn7m:新生代内存
+             *  -XX:SurvivorRatio=2    eden/from 或者 eden/to
+             *  -XX:NewRatio=2          老年代/新生代
+             */
+
 Test1 配置信息：-Xmx20m  -Xms5m -XX:+PrintCommandLineFlags   -XX:+UseSerialGC    -XX:+PrintGCDetails
     日志信息：
         D:\java\jdk1.8.0_171\bin\java.exe -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:50612,suspend=y,server=n -Xmx20m -Xms5m -XX:+PrintCommandLineFlags -XX:+UseSerialGC -XX:+PrintGCDetails -javaagent:D:\java\ideaIC-2018.2.1.win\lib\rt\debugger-agent.jar=file:/C:/Users/lhf/AppData/Local/Temp/capture.props -Dfile.encoding=UTF-8 -classpath D:\java\jdk1.8.0_171\jre\lib\charsets.jar;D:\java\jdk1.8.0_171\jre\lib\deploy.jar;D:\java\jdk1.8.0_171\jre\lib\ext\access-bridge-64.jar;D:\java\jdk1.8.0_171\jre\lib\ext\cldrdata.jar;D:\java\jdk1.8.0_171\jre\lib\ext\dnsns.jar;D:\java\jdk1.8.0_171\jre\lib\ext\jaccess.jar;D:\java\jdk1.8.0_171\jre\lib\ext\jfxrt.jar;D:\java\jdk1.8.0_171\jre\lib\ext\localedata.jar;D:\java\jdk1.8.0_171\jre\lib\ext\nashorn.jar;D:\java\jdk1.8.0_171\jre\lib\ext\sunec.jar;D:\java\jdk1.8.0_171\jre\lib\ext\sunjce_provider.jar;D:\java\jdk1.8.0_171\jre\lib\ext\sunmscapi.jar;D:\java\jdk1.8.0_171\jre\lib\ext\sunpkcs11.jar;D:\java\jdk1.8.0_171\jre\lib\ext\zipfs.jar;D:\java\jdk1.8.0_171\jre\lib\javaws.jar;D:\java\jdk1.8.0_171\jre\lib\jce.jar;D:\java\jdk1.8.0_171\jre\lib\jfr.jar;D:\java\jdk1.8.0_171\jre\lib\jfxswt.jar;D:\java\jdk1.8.0_171\jre\lib\jsse.jar;D:\java\jdk1.8.0_171\jre\lib\management-agent.jar;D:\java\jdk1.8.0_171\jre\lib\plugin.jar;D:\java\jdk1.8.0_171\jre\lib\resources.jar;D:\java\jdk1.8.0_171\jre\lib\rt.jar;D:\jvm\out\production\jvm_heap;D:\java\ideaIC-2018.2.1.win\lib\idea_rt.jar com.lhf.test.Test1
