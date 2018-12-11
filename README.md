@@ -11,10 +11,10 @@ Test2 配置信息：
              * -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=d:/test2.dump
              * -Xss5m   栈内存
 
-                      * -XX:PermSize=64M 方法区大小
-                      * -XX:MaxPermSize=64M  方法区最大大小
-                      * ************************************
-                      *  jdk1.8后，没有了方法区，改成了元数据区  Perm==>  MateData
+              * -XX:PermSize=64M 方法区大小
+              * -XX:MaxPermSize=64M  方法区最大大小
+              * ************************************
+              *  jdk1.8后，没有了方法区，改成了元数据区  Perm==>  MateData
              *
              *  -Xms20m:初始内存
              *  -Xmx20m:可扩展内存
